@@ -1,0 +1,64 @@
+.container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topBar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.025em;
+}
+
+.user {
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: #e5e7eb;
+  padding: 0.25rem 0.75rem;
+  borderRadius: 9999px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+.colLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.colRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.splitRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .splitRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
