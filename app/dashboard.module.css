@@ -1,8 +1,16 @@
-.container {
-  min-height: 100vh;
-  background-color: #f3f4f6;
-  padding: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow: hidden;
 }
 
 .topBar {
@@ -10,55 +18,71 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-.topBar h1 {
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emoji {
   font-size: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #111827;
-  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0;
 }
 
-.user {
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.statusText {
   font-size: 0.875rem;
-  color: #6b7280;
-  background: #e5e7eb;
-  padding: 0.25rem 0.75rem;
-  borderRadius: 9999px;
+  color: var(--accent-green);
+  font-weight: 500;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: 350px 1fr;
-  }
-}
-
-.colLeft {
+.meta {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
 }
 
-.colRight {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.lastSync {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
 }
 
-.splitRow {
+.logout {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.kanbanBoard {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-}
-
-@media (min-width: 1280px) {
-  .splitRow {
-    grid-template-columns: 1fr 1fr;
-  }
+  flex: 1;
+  overflow: hidden; /* Prevent full page scroll, allow columns to scroll */
 }

@@ -1,0 +1,46 @@
+.column {
+  background: #1f293700; /* Transparent, relies on page background */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 280px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.count {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--surface);
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* Space for scrollbar */
+}
