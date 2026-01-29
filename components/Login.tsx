@@ -7,7 +7,7 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'klause123') {
+    if (password === 'Rs133497') {
       onLogin();
     } else {
       setError('Invalid access token');
