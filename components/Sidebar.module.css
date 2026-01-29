@@ -26,6 +26,14 @@
   justify-content: center;
   font-size: 3rem;
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  overflow: hidden; /* Ensure image fits in circle */
+  background-position: center;
+}
+
+.avatar:hover {
+  opacity: 0.8;
 }
 
 .info {
